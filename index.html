@@ -1,0 +1,88 @@
+<!-- wp:html -->
+<p>&nbsp;</p>
+<p><style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0px;
+            font-family: 'poppins', sans-serif;
+            font-size: 18px;
+        }
+
+       
+
+        .container {
+            
+            padding: 30px;
+            border: 1px solid #eeeeee;
+            border-radius: 10px;
+            background-color: #8f8f8f94;
+        }
+
+        h4 {
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: white;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            background-color: #ffffff3f;
+    transition: all 0.3s ease-in-out;
+            margin-bottom: 10px;
+            border-radius: 5px;
+
+        }
+        input:focus {
+            border-radius: 14px;
+
+            background-color: #ffffff;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+        }
+
+        #submit {
+            border: none;
+            background-color: rgb(46, 46, 46);
+            color: white;
+            width: 200px;
+            margin-top: 10px;
+            border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+        }
+
+        #submit:hover {
+            background-color: #333333;
+border-radius:14px;
+        }
+    </style></p>
+<div class="container">
+    <form action="" method="post" name="contact-form">
+        <input name="your-name" required="" type="text" placeholder="Collage Name" /> <input name="your-number" required="" type="text" placeholder="Mobile Number" />
+        <input name="your-email" required="" type="email" placeholder="Email" /> <textarea name="message" rows="7" placeholder="Your Message">
+        </textarea>
+        <input id="submit" type="submit" value="Submit" />
+        </form>
+        </div>
+<p><script>
+        const scriptURL = 'https://script.google.com/macros/s/..........your.deployment.link........../exec'
+
+        const form = document.forms['contact-form']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => alert("Thank you! your form is submitted successfully."))
+                .then(() => { window.location.reload(); })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script></p>
+<!-- /wp:html -->
+
+<!-- wp:paragraph -->
+<p>&nbsp;</p>
+<!-- /wp:paragraph -->
